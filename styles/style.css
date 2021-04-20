@@ -9,6 +9,7 @@
     background-color: black;
     display: flex;
     padding: 20px;
+    align-items: center;
    
 }
 nav{
@@ -23,8 +24,9 @@ nav ul{
 nav ul li{
     display: inline-block;
     margin-right: 20px;
-        
-    text-align: center;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 a{
     text-decoration: none;
@@ -32,18 +34,35 @@ a{
     font-size: 20px;
 }
 .container{  
-    position: absolute;
-    width: 100%;
-    text-align: center;
+    max-width: 1080px;
+    margin:auto;
+    padding-left: 25px;
+    padding-right: 25px;
 }
-.container img{
-    max-width: 100%;
-    
-}
+
 .column {
-  float: left;
-  width: 25%;
-  padding: 25px;
-    padding-left: 50px;
+    flex-basis:25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+.column:hover{
+    transform: translateY(-5px);
+}
+.column img{
+    max-width: 100%;
+        
+}
+.row{
+    
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.title{
+    text-align: center;
+    position: relative;
     
 }
